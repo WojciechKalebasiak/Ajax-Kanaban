@@ -15,15 +15,16 @@ $(document).ready(function() {
     })// end of ajax request
    function setupColumns (data) {
    	$(data).each(function(index, el) {
-   		var column = new Column(el.name, el.id)
-   		board.createColumn(column);
+   		var column = new Column(el.name, el.id);
+   		var board = new Board(); 
+   		board.addColumn(column);
    		setupCards(column, el.cards)
    	}); //end of loop
    }//end of setupColumns
    function setupCards (column, cards) {
    	$(cards).each(function(index, el) {
    		var card = new Card(el.name, el.id, el.bootcamp_kanban_column_id);
-   		column.createCard(card);
+   		column.addCard(card);
 
    	});
    }
