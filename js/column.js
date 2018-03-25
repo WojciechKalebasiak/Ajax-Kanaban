@@ -75,7 +75,14 @@
          removeColumn: function() {
              var self = this;
              this.$element.fadeOut('fast', function() {
-                 self.$element.remove();
+                  $.ajax({
+                       url: apiUrl + '/column/' + self.id,
+                       method: 'DELETE',
+                       success: function(response) {
+                           self.$element.remove();
+                       }
+
+                   })
              });
          },
          addCard: function(card) {

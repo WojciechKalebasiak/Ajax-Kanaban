@@ -20,7 +20,7 @@
            removeCard: function() {
                var self = this;
                this.$element.fadeOut('fast', function() {
-                   $.$.ajax({
+                   $.ajax({
                        url: apiUrl + '/card/' + self.id,
                        method: 'DELETE',
                        success: function(response) {

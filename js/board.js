@@ -72,6 +72,5 @@
           newBoard.$element.insertAfter(e.target);
           newBoard.$element.children('.board-header').jAnimateOnce('fadeInUp');
           newBoard.$element.children('.board-form').jAnimateOnce('fadeInUp');
-
       });
       $('main').append(this.$element);
